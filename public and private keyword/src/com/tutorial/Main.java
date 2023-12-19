@@ -23,7 +23,7 @@ class Player {
 public class Main {
     public static void main(String [] args){
         // instansiasi atau pembuat objek baru
-        Player hero_1 = new Player("Saitama",20, 100);
+        Player hero_1 = new Player("Nurul",20, 100);
         hero_1.Display();
        
     }
