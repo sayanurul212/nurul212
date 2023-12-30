@@ -1,71 +1,31 @@
 package com.tutorial;
 
-class Mahasiswa {
+class Hero{
+    String nama;
 
-   //Data Member
-   String nama;
-   String nim;
-   String prodi;
-
-   //konstruktor
-   Mahasiswa (String nama, String nim, String prodi){
-    this.nama = nama;
-    this.nim = nim;
-    this.prodi = prodi;
-        
+    void display(){
+        System.out.println("Nama Hero : " + nama);
     }
+}
 
-    //method tanpa return dan tanpa parameter
-    void show(){
-        System.out.println("Nama : " + this.nama);
-        System.out.println("NIM : " + this.nim);
-        System.out.println("Prodi : " + this.prodi);
+class HeroTank extends Hero{
+    float health;
 
-    }
-
-    //method tanpa return dengan parameter
-    void setNama(String nama, String nim, String prodi) {
-        this.nama = nama;
-        this.nim = nim;
-        this.prodi = prodi;
-    }
-
-    //method tanpa parameter dengan return
-    String getNama(){
-        return this.nama;
-    
-    }
-
-    String getNIM(){
-        return this.nim;
-
-    }
-
-    //method dengan parameter dengan return
-    String sayHi(String pesan) {
-        return pesan + " aku " + this.nama + " Mahasiswa PTI";
-
+    void display(){
+        System.out.println("Health : " + health);
     }
 
 }
-
 public class Main {
+    public static void main(String[] args) {
+        Hero hero_1 = new Hero();
+        hero_1.nama = "salsa";
+        hero_1.display();
 
-    public static void main (String[] args) {
-        //membuat objek baru atau instansiasi
-        Mahasiswa mhs1 = new Mahasiswa("Nurul", "22241076", "PTI");
+        HeroTank hero_2 = new HeroTank();
+        hero_2.nama = "susi";
+        hero_2.display();
 
-        //Memanggil Method
-        mhs1.show();
-        mhs1.setNama("setia", "22241047", "PTI");
-        mhs1.show();
-
-        System.out.println(mhs1.getNama());
-        System.out.println(mhs1.getNIM());
-
-        String pesan = mhs1.sayHi("sayang");
-        System.out.println(pesan);
-
+         
     }
-
 }
